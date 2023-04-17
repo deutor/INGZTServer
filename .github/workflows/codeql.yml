@@ -68,7 +68,8 @@ jobs:
 
     - run: |
         echo "Run, Build Application using script"
-        ./build.sh
+        mvn -B package --file pom.xml
+    #./build.sh
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
